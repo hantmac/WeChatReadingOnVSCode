@@ -7,9 +7,6 @@ const WebView_1 = require("./WebView");
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 function activate(context) {
-    context.subscriptions.push(vscode.commands.registerCommand('extension.helloWorld', () => {
-        vscode.window.showInformationMessage('Hello World!');
-    }));
     context.subscriptions.push(vscode.commands.registerCommand('itemClick', (label) => {
         vscode.window.showInformationMessage(label);
         const webView = WebView_1.createWebView(context, vscode.ViewColumn.Active, "wxread");

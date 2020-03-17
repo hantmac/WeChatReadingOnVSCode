@@ -1,6 +1,6 @@
 {
-	"name": "wxread",
-	"displayName": "wxread",
+	"name": "WeChatReadingOnVSCode",
+	"displayName": "WeChatReadingOnVSCode",
 	"description": "",
 	"version": "0.0.1",
 	"engines": {
@@ -12,15 +12,13 @@
 	],
 	"icon": "images/icon.png",
 	"activationEvents": [
-		"onCommand:extension.helloWorld",
-		"onCommand:itemClick",
+		"onCommand:extension.wxread",
 		"onView:treeView-item",
 		"onWebviewPanel:itemClick"
-		
 	],
 	"repository": {
 		"type": "git",
-        "url": "https://github.com/hantmac/wxread"
+		"url": "https://github.com/hantmac/WeChatReadingOnVSCode"
 	},
 	"main": "./out/extension.js",
 	"contributes": {
@@ -31,18 +29,20 @@
 			}
 		],
 		"menus": {
-            "editor/context": [
+			"editor/context": [
 				{
 					"when": "editorFocus",
 					"command": "itemClick",
 					"group": "navigation"
 				}
 			],
-			"editor/title": [{
-				"command": "itemClick",
-				"group": "navigation"
-			}]
-        }
+			"editor/title": [
+				{
+					"command": "itemClick",
+					"group": "navigation"
+				}
+			]
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
