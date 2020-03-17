@@ -1,65 +1,30 @@
-# WeChatReadingOnVSCode README
+# fuckdb
 
-This is the README for your extension "WeChatReadingOnVSCode". After writing up a brief description, we recommend including the following sections.
+- 中文：右键选择FuckDb使用
+- English: Quickly choose FuckDb to use
 
-## Features
+![](https://tva1.sinaimg.cn/large/006tNbRwgy1gayncbqsmoj320o0dc14d.jpg)
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
 
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+`fuckdb` helps you fuck the db when you write go struct.
+`fuckdb` generates a go compatible struct type with the required column names, data types, and annotations just fill in the database information in the web UI. Making go web develop very easy by saving a lot of time writing structure.`fuckdb`is based/inspired by the work of Seth Shelnutt's db2struct, and Db2Struct is based/inspired by the work of ChimeraCoder's gojson package gojson.
+# Web UI
+- Easy to use
+Only a few clicks on the web UI can generate the corresponding golang struct with `ORM` or `json` or `xm` ... tags.
+# How to use?
+### Docker deploy
+- modify your backend ip in  `frontend/src/config/index.js`
+- docker-compose up -d
+- Use `localhost:8081` you will get the next page
+![](https://tva1.sinaimg.cn/large/006tNbRwgy1g9w1ru6tl4j31wb0u0aft.jpg)
+- Just Put your mariaDB/mysql info into it and you will get your golang code.
+- Click generate.
+- Boom！Enjoy your coffee and copy your struct code.
+![](https://tva1.sinaimg.cn/large/006tNbRwly1g9w531osobj31u90u0jzq.jpg)
+### Source code deploy
+- git clone the source code
+- cd fuckdb/
+- go run main.go
+- cd frontend && npm run dev/start
+- Use `localhost:8081` you will get the web UI
+- The same operation with docker deployment.
